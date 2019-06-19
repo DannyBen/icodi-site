@@ -9,9 +9,17 @@ end
 set :bind, '0.0.0.0'
 set :port, 3000
 
+get '/sandbox' do
+  erb :sandbox
+end
+
 get '/*' do
   seed = params[:splat].first  
   seed = nil if seed.empty?
+
+  color, background = params[:color], params[:background]
+  color = "##{color}" if color and !color.start_with? '#'
+  background = "##{background}" if background and !background.start_with? '#'
 
   options = {}
   options[:pixels]     = params[:pixels].to_i if params[:pixels]
@@ -19,8 +27,10 @@ get '/*' do
   options[:density]    = params[:density].to_f if params[:density]
   options[:mirror]     = params[:mirror].to_sym if params[:mirror]
   options[:jitter]     = params[:jitter].to_f if params[:jitter]
-  options[:background] = "##{params[:background]}" if params[:background]
-  options[:color]      = "##{params[:color]}" if params[:color]
+  options[:background] = background if background
+  options[:color]      = color if color
+
+  p options
 
   content_type 'image/svg+xml'
   Icodi.new(seed, options).render

@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Icodi - Deterministic Random SVG Icons</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+
+    <script src="/scripts/spectrum.js"></script>
+    <script src="/scripts/main.js"></script>
+
+    <link rel="stylesheet" href="/styles/marx.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+    <link rel="stylesheet" href="/styles/spectrum.css">
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  </head>
+  <body>
+    <header>
+      <img id='logo' src='/images/logo.svg'>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <a href=''>Icodi Source Code on GitHub</a>
+    </footer>
+  </body>
+</html>
