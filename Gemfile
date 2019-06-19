@@ -9,3 +9,5 @@ gem "puma"
 group :development, :test do
   gem 'sinatra-contrib'
 end
+
+ruby '2.6.3'
