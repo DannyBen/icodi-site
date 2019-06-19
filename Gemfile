@@ -7,5 +7,5 @@ gem "icodi"
 gem "puma"
 
 group :development, :test do
-  gem 'sinatra/contrib'
+  gem 'sinatra-contrib'
 end
