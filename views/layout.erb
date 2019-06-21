@@ -2,6 +2,7 @@
 
 <html>
   <head>
+    <%= erb :analytics if settings.production? %>
     <title>Icodi - Deterministic Random SVG Icons</title>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"

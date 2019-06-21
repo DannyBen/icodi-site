@@ -30,8 +30,6 @@ get '/*' do
   options[:background] = background if background
   options[:color]      = color if color
 
-  p options
-
   content_type 'image/svg+xml'
   Icodi.new(seed, options).render
 end
