@@ -14,6 +14,8 @@ get '/sandbox' do
 end
 
 get '/*' do
+  cache_control :no_cache, :no_store, :must_revalidate
+
   seed = params[:splat].first  
   seed = nil if seed.empty?
 

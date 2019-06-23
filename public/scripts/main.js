@@ -16,4 +16,6 @@ $(function() {
   $('#seed').on('keyup', update);
 
   $('.color').spectrum({allowEmpty: true, preferredFormat: "hex"});
+
+  document.update = update;
 });
