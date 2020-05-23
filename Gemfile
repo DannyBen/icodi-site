@@ -10,4 +10,4 @@ group :development, :test do
   gem 'sinatra-contrib'
 end
 
-ruby '2.6.3'
+ruby '2.7.0'
