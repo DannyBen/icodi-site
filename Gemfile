@@ -4,10 +4,8 @@ source "https://rubygems.org"
 
 gem "sinatra"
 gem "icodi"
-gem "puma"
+gem "puma", "< 5.0" # Slow Ctrl+C in 5.x
 
 group :development, :test do
   gem 'sinatra-contrib'
 end
-
-ruby '2.7.0'
