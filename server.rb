@@ -1,10 +1,7 @@
 require 'sinatra'
 require 'icodi'
 
-if development?
-  require "sinatra/reloader"
-  also_reload 'lib/icodi.rb'
-end
+require "sinatra/reloader" if development?
 
 set :bind, '0.0.0.0'
 set :port, 3000
