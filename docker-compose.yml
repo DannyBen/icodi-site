@@ -1,7 +1,9 @@
-version: '3'
-
 services:
   web:
     build: .
     image: dannyben/icodi-sandbox
     ports: ["3000:3000"]
+
+  bash:
+    image: dannyben/icodi-sandbox
+    command: bash

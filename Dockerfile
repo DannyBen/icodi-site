@@ -1,9 +1,7 @@
-FROM dannyben/alpine-ruby:ruby2.7.1
+FROM dannyben/alpine-ruby:3.0.3
 
 COPY Gemfile* ./
-RUN gem install bundler && \
-    bundle config set without 'development test' && \
-    bundle install --jobs=3 --retry=3
+RUN gem install bundler && bundle install --jobs=3 --retry=3
 
 WORKDIR /app
 COPY . .
