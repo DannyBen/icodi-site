@@ -2,9 +2,10 @@
 
 source "https://rubygems.org"
 
-gem "sinatra"
 gem "icodi"
 gem "puma"
+gem "rackup"
+gem "sinatra"
 
 # group :development, :test do
 #   gem 'sinatra-contrib'
