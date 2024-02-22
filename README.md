@@ -1,5 +1,4 @@
-Icodi Site
-==================================================
+# Icodi Site
 
 This is the source code for the [Icodi Playground][1] which demonstrates
 the use of the [Icodi gem][2].

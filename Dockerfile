@@ -1,4 +1,4 @@
-FROM dannyben/alpine-ruby:3.0.3
+FROM dannyben/alpine-ruby:3.2.2
 
 COPY Gemfile* ./
 RUN gem install bundler && bundle install --jobs=3 --retry=3
