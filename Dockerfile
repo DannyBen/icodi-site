@@ -5,7 +5,6 @@ RUN gem install bundler && bundle install --jobs=3 --retry=3
 
 WORKDIR /app
 COPY . .
-ENV RACK_ENV=production
 RUN chmod +x /app/server.rb
 
 EXPOSE 3000
